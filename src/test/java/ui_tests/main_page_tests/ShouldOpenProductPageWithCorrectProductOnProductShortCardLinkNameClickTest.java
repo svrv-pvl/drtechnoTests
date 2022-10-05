@@ -13,13 +13,13 @@ public class ShouldOpenProductPageWithCorrectProductOnProductShortCardLinkNameCl
     @BeforeAll
     public static void arrange(){
         openMainPage();
-        expectedProductName = mainPage.leaderCards.get(leaderProductIndex).getName();
+        expectedProductName = mainPage.leaderProducts.get(leaderProductIndex).getName();
     }
 
     @Test
     public void actAndAssert(){
         //act
-        ProductPage productPage = mainPage.leaderCards.get(leaderProductIndex).clickProductNameLink();
+        ProductPage productPage = mainPage.leaderProducts.get(leaderProductIndex).clickProductNameLink();
         //assert
         assertEquals(expectedProductName, productPage.getProductName());
     }

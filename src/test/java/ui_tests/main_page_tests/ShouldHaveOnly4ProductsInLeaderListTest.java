@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ShouldHaveOnly4GoodsInLeaderListTest extends MainPageBaseTest{
+public class ShouldHaveOnly4ProductsInLeaderListTest extends MainPageBaseTest{
     private int AMOUNT_OF_LEADERS_ON_MAIN_PAGE = 4;
 
     @BeforeAll
@@ -15,6 +15,6 @@ public class ShouldHaveOnly4GoodsInLeaderListTest extends MainPageBaseTest{
 
     @Test
     public void assertMethod(){
-        assertEquals(AMOUNT_OF_LEADERS_ON_MAIN_PAGE , mainPage.leaderCards.size());
+        assertEquals(AMOUNT_OF_LEADERS_ON_MAIN_PAGE , mainPage.leaderProducts.size());
     }
 }

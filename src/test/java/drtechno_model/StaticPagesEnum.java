@@ -1,6 +1,6 @@
 package drtechno_model;
 
-public enum StaticPages {
+public enum StaticPagesEnum {
     ABOUT_COMPANY,
     GUARANTEE,
     DELIVERY,

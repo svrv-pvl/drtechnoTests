@@ -2,7 +2,7 @@ package drtechno_model.page_parts;
 
 import com.codeborne.selenide.SelenideElement;
 import drtechno_model.StaticPage;
-import drtechno_model.StaticPages;
+import drtechno_model.StaticPagesEnum;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selectors.byText;
@@ -35,7 +35,7 @@ public class MainMenu {
         contactsLink = navElement.find(byText(CONTACTS_LINK_SEARCH_STRING));
     }
 
-    public StaticPage openStaticPage(StaticPages pageType){
+    public StaticPage openStaticPage(StaticPagesEnum pageType){
         switch (pageType){
             case ABOUT_COMPANY -> aboutCompanyLink.click();
             case GUARANTEE -> guaranteeLink.click();
