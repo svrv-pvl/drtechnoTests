@@ -8,9 +8,9 @@ import ui_tests.main_page_tests.MainPageBaseTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ShouldOpenAboutPageFromMainMenuTest extends MainPageBaseTest {
+public class ShouldOpenPaymentPageFromMainMenuTest extends MainPageBaseTest {
     private static final int LEADER_PRODUCT_CARD_INDEX = 2;
-    private static final String ABOUT_COMPANY_PAGE_HEADER = "О КОМПАНИИ";
+    private static final String ABOUT_COMPANY_PAGE_HEADER = "ОПЛАТА";
 
     @BeforeAll
     public static void arrange(){
@@ -19,7 +19,7 @@ public class ShouldOpenAboutPageFromMainMenuTest extends MainPageBaseTest {
 
     @Test
     public void actAndAssert(){
-        StaticPage aboutCompanyPage = mainPage.mainMenu.openStaticPage(StaticPages.ABOUT_COMPANY);
+        StaticPage aboutCompanyPage = mainPage.mainMenu.openStaticPage(StaticPages.PAYMENT);
         assertEquals(ABOUT_COMPANY_PAGE_HEADER, aboutCompanyPage.getHeader());
     }
 }

@@ -4,12 +4,12 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class AboutCompanyPage {
+public class StaticPage {
     private String header;
 
     private final String HEADER_XPATH = "//div[@class='page_title redef_pt']/p";
 
-    public AboutCompanyPage(){
+    public StaticPage(){
         header = $(By.xpath(HEADER_XPATH)).text();
     }
 
