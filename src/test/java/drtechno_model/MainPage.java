@@ -10,16 +10,13 @@ import java.util.List;
 
 import static com.codeborne.selenide.Selenide.$$;
 
-public class MainPage {
-    public MainMenu mainMenu;
-    public CatalogSection catalogSection;
+public class MainPage extends BasePage{
     public List<ProductShortCard> leaderProducts;
 
     private final String LEADER_PRODUCTS_XPATH = "(//ul[@class='catalog_list'])[1]/li";
 
     public MainPage(){
-        mainMenu = new MainMenu();
-        catalogSection = new CatalogSection();
+        super();
 
         leaderProducts = new ArrayList<>();
 

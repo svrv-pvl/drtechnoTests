@@ -8,9 +8,9 @@ import org.junit.jupiter.params.provider.EnumSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ShouldOpenPickupPageFromMainMenuTest extends MainMenuBaseTest {
+public class ShouldOpenContactsPageFromMainMenuOnAllPagesTest extends MainMenuBaseTest {
     private static final int LEADER_PRODUCT_CARD_INDEX = 2;
-    private static final String PICKUP_PAGE_HEADER = "САМОВЫВОЗ";
+    private static final String CONTACTS_PAGE_HEADER = "КОНТАКТНЫЕ ДАННЫЕ";
 
     @ParameterizedTest
     @EnumSource(AllPagesEnum.class)
@@ -18,8 +18,8 @@ public class ShouldOpenPickupPageFromMainMenuTest extends MainMenuBaseTest {
         //arrange
         openPage(page);
         //act
-        StaticPage pickupPage = testPage.mainMenu.openStaticPage(StaticPagesEnum.PICKUP);
+        StaticPage contactsPage = testPage.mainMenu.openStaticPage(StaticPagesEnum.CONTACTS);
         //assert
-        assertEquals(PICKUP_PAGE_HEADER, pickupPage.getHeader());
+        assertEquals(CONTACTS_PAGE_HEADER, contactsPage.getHeader());
     }
 }
