@@ -19,9 +19,7 @@ public class MainPage extends BasePage{
         super();
 
         leaderProducts = new ArrayList<>();
-
         ElementsCollection leaderProducts = $$(By.xpath(LEADER_PRODUCTS_XPATH));
-
         for(int i = 0; i < leaderProducts.size(); i++){
             this.leaderProducts.add(new ProductShortCard(leaderProducts.get(i)));
         }
