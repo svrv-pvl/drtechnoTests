@@ -31,6 +31,11 @@ public class ProductShortCard {
         return page(ProductPage.class);
     }
 
+    public ProductPage clickImageLink(){
+        productImage.closest("a").click();
+        return page(ProductPage.class);
+    }
+
     public void clickAddProductToBasketButton(){
         addToBasketButton.click();
     }
