@@ -21,6 +21,7 @@ public class MainMenuBaseTest {
                 CatalogPage productPage = open("http://drtechno.ru/?page=product", CatalogPage.class);
                 testPage = productPage.productCards.get(1).clickProductNameLink();
             }
+            case BASKET -> open("http://drtechno.ru/?page=basket", BasketPage.class);
         }
     }
 }

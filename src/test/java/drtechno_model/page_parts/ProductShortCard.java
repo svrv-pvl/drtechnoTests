@@ -1,6 +1,7 @@
 package drtechno_model.page_parts;
 
 import com.codeborne.selenide.SelenideElement;
+import drtechno_model.MainPage;
 import drtechno_model.ProductPage;
 import org.openqa.selenium.By;
 
@@ -28,5 +29,9 @@ public class ProductShortCard {
     public ProductPage clickProductNameLink(){
         productNameLink.click();
         return page(ProductPage.class);
+    }
+
+    public void clickAddProductToBasketButton(){
+        addToBasketButton.click();
     }
 }

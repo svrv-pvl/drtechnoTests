@@ -9,5 +9,6 @@ public enum AllPagesEnum {
     PAYMENT,
     CONTACTS,
     CATALOG,
-    PRODUCT
+    PRODUCT,
+    BASKET
 }
