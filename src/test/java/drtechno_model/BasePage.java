@@ -1,11 +1,13 @@
 package drtechno_model;
 
+import com.codeborne.selenide.Selenide;
 import drtechno_model.page_parts.CatalogSection;
 import drtechno_model.page_parts.MainMenu;
 import drtechno_model.page_parts.MiniBasket;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Configuration.baseUrl;
 
 public class BasePage {
     public MainMenu mainMenu;
@@ -16,6 +18,7 @@ public class BasePage {
     private final By HEADER_XPATH = By.xpath("//div[contains(@class, 'page_title')]/p");
 
     public BasePage(){
+        baseUrl = "http://drtechno.ru";
         mainMenu = new MainMenu();
         catalogSection = new CatalogSection();
         miniBasket = new MiniBasket();

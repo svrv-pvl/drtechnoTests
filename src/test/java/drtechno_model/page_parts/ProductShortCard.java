@@ -26,6 +26,10 @@ public class ProductShortCard {
         return productNameLink.text();
     }
 
+    public String getProductDetailsURL(){
+        return productNameLink.attr("href");
+    }
+
     public ProductPage clickProductNameLink(){
         productNameLink.click();
         return page(ProductPage.class);

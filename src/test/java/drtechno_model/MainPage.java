@@ -12,6 +12,7 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class MainPage extends BasePage{
     public List<ProductShortCard> leaderProducts;
+    private int amountOfLeaders;
 
     private final String LEADER_PRODUCTS_XPATH = "(//ul[@class='catalog_list'])[1]/li";
 
@@ -23,5 +24,10 @@ public class MainPage extends BasePage{
         for(int i = 0; i < leaderProducts.size(); i++){
             this.leaderProducts.add(new ProductShortCard(leaderProducts.get(i)));
         }
+        amountOfLeaders = leaderProducts.size();
+    }
+
+    public int getAmountOfLeaders(){
+        return amountOfLeaders;
     }
 }
