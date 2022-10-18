@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
-public class CatalogPage extends BasePage{
+public class CatalogPage extends BaseShoppingPage{
     public ArrayList<ProductLargeCard> productCards;
 
     private final By PRODUCT_CARDS_XPATH = By.xpath("//ul[@class='catalog_list']/li");

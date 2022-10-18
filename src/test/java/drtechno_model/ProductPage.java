@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class ProductPage extends BasePage{
+public class ProductPage extends BaseShoppingPage{
     private final String productName;
 
     private final String PRODUCT_NAME_XPATH = "//div[@class='catalog_product']//div[@class='product_title']";
